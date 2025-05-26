@@ -3,6 +3,9 @@ name: hello (test)
 on:
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
   hello-test:
     runs-on: ubuntu-latest
