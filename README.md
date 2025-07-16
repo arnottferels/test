@@ -1,4 +1,4 @@
-Just a test repo
+Just a **test** repo
 
 ```pwsh
 # keep the latest run, delete the rest
