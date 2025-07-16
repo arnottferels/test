@@ -1,43 +1,43 @@
 {
-  "/###test###/guangzhou-stadium": {
+  "/concept/guangzhou-stadium": {
     "paths_counts": {
-      "/###test###/guangzhou-stadium": 2
+      "/concept/guangzhou-stadium": 2
     },
     "total_count": 2
   },
-  "/###test###/helix-spire-symphony": {
+  "/concept/helix-spire-symphony": {
     "paths_counts": {
-      "/###test###/helix-spire-symphony": 2
+      "/concept/helix-spire-symphony": 2
     },
     "total_count": 2
   },
-  "/###test###/north-star": {
+  "/concept/north-star": {
     "paths_counts": {
       "/prototypes/north-star": 1
     },
     "total_count": 1
   },
-  "/###test###/orologio-cosmico": {
+  "/concept/orologio-cosmico": {
     "paths_counts": {
-      "/###test###/orologio-cosmico": 1
+      "/concept/orologio-cosmico": 1
     },
     "total_count": 1
   },
-  "/###test###/pulse-tower": {
+  "/concept/pulse-tower": {
     "paths_counts": {
-      "/###test###/pulse-tower": 1
+      "/concept/pulse-tower": 1
     },
     "total_count": 1
   },
-  "/###test###/serpentine-pavilion": {
+  "/concept/serpentine-pavilion": {
     "paths_counts": {
-      "/###test###/serpentine-pavilion": 2
+      "/concept/serpentine-pavilion": 2
     },
     "total_count": 2
   },
-  "/###test###/weightless": {
+  "/concept/weightless": {
     "paths_counts": {
-      "/###test###/weightless": 1
+      "/concept/weightless": 1
     },
     "total_count": 1
   },
