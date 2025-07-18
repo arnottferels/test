@@ -12,54 +12,6 @@
     "fingerprint": null
   },
   {
-    "id": 103,
-    "timestamp": "2025-07-01T18:00:00.000Z",
-    "comment_id": "dummy-103",
-    "parent_comment_id": null,
-    "page_path": "/_test/comment-3",
-    "message": "test comment",
-    "name": "no-name",
-    "email": "no-name@example.com",
-    "visitor_id": "v-dummy-103",
-    "fingerprint": "fp-dummy-103"
-  },
-  {
-    "id": 104,
-    "timestamp": "2025-07-01T19:00:00.000Z",
-    "comment_id": "dummy-104",
-    "parent_comment_id": null,
-    "page_path": "/_test/comment-3",
-    "message": "test comment",
-    "name": "another-name",
-    "email": "another-name@example.com",
-    "visitor_id": "v-dummy-104",
-    "fingerprint": "fp-dummy-104"
-  },
-  {
-    "id": 203,
-    "timestamp": "2025-07-01T18:00:00.000Z",
-    "comment_id": "dummy-203",
-    "parent_comment_id": null,
-    "page_path": "/_test/comment-3",
-    "message": "test comment",
-    "name": "no-name",
-    "email": "no-name@example.com",
-    "visitor_id": "v-dummy-203",
-    "fingerprint": "fp-dummy-203"
-  },
-  {
-    "id": 204,
-    "timestamp": "2025-07-01T19:00:00.000Z",
-    "comment_id": "dummy-204",
-    "parent_comment_id": null,
-    "page_path": "/_test/comment-3",
-    "message": "test comment",
-    "name": "another-name",
-    "email": "another-name@example.com",
-    "visitor_id": "v-dummy-204",
-    "fingerprint": "fp-dummy-204"
-  },
-  {
     "id": 300,
     "timestamp": "2025-07-01T15:00:00.000Z",
     "comment_id": "dummy-300",
