@@ -23,6 +23,8 @@ jobs:
 
       REMOTE_COUNT_FILE: build/unique_visit/page_path_content_page.json
 
+      TABLE_NAME: ${{ secrets.TABLE_NAME }}
+
       SILENT: "1"
       OUTPUT_DIR: v2/json
       OUTPUT_COUNT_FILE: c.json
