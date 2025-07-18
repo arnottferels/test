@@ -1,4 +1,4 @@
-name: "v2: Export co table (All)"
+name: "v1: Export co table (All)"
 
 on:
   workflow_dispatch:
