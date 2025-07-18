@@ -1,0 +1,38 @@
+[
+  {
+    "id": 100,
+    "timestamp": "2025-07-01T15:00:00.000Z",
+    "comment_id": "dummy-102",
+    "parent_comment_id": null,
+    "page_path": "/_test/comment-1",
+    "message": "test comment",
+    "name": "john",
+    "email": "john@example.com",
+    "visitor_id": "v-dummy-102",
+    "fingerprint": "fp-dummy-102"
+  },
+  {
+    "id": 101,
+    "timestamp": "2025-07-01T16:00:00.000Z",
+    "comment_id": "dummy-101",
+    "parent_comment_id": "dummy-102",
+    "page_path": "/_test/comment-1",
+    "message": "test comment",
+    "name": "doe",
+    "email": "doe@example.com",
+    "visitor_id": "v-dummy-101",
+    "fingerprint": "fp-dummy-101"
+  },
+  {
+    "id": 102,
+    "timestamp": "2025-07-01T16:00:00.000Z",
+    "comment_id": "dummy-102",
+    "parent_comment_id": "dummy-102",
+    "page_path": "/_test/comment-1",
+    "message": "test comment",
+    "name": "smith",
+    "email": "smith@example.com",
+    "visitor_id": "v-dummy-102",
+    "fingerprint": "fp-dummy-102"
+  }
+]
