@@ -1,0 +1,64 @@
+name: "v1: Update comments"
+
+on:
+  workflow_dispatch:
+  workflow_run:
+    workflows:
+      - "v1: Export co table (Yesterday)"
+    types:
+      - completed
+
+permissions:
+  contents: write
+
+jobs:
+  update-comments:
+    runs-on: ubuntu-latest
+    env:
+      REPO_NAME: ${{ secrets.REPO_NAME }}
+      REPO_DIR: repo
+
+      REMOTE: https://x-access-token:${{ secrets.PUSH_TOKEN }}@github.com/arnottferels/${{ secrets.REPO_NAME }}.git
+      REMOTE_BRANCH: main
+
+      REMOTE_DIR: build/${{ secrets.TABLE_NAME_CO }}
+      OUTPUT_DIR: v1/co/json # todo: change 
+
+      TABLE_NAME: ${{ secrets.TABLE_NAME_CO }}
+
+      SILENT: "1"
+
+    steps:
+      - uses: actions/checkout@v4.2.2
+
+      - name: Clone target repo
+        run: |
+          git clone "$REMOTE" "$REPO_DIR"
+          cd "$REPO_DIR"
+          git checkout "$REMOTE_BRANCH"
+
+      - uses: actions/setup-node@v4
+
+      - name: Install and build
+        run: |
+          cd "$REPO_DIR"
+          npm install
+          npm run ${{ secrets.TABLE_NAME_CO }}:build
+
+      - name: Copy from remote repo to output
+        run: |
+          mkdir -p "$OUTPUT_DIR/${{ secrets.TABLE_NAME_CO }}"
+          cp -r "$REPO_DIR/$REMOTE_DIR/"* "$OUTPUT_DIR/${{ secrets.TABLE_NAME_CO }}/"
+
+      - name: Commit copied files
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+
+          git stash -q --include-untracked
+          git pull -q --rebase origin main || exit 1
+          git stash pop -q
+
+          git add "$OUTPUT_DIR"
+          git commit -m "v1: Update $OUTPUT_DIR $(date -u +'%F %H:%M')" -q || echo "no changes"
+          git push -q origin main
