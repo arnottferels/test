@@ -16,17 +16,16 @@ jobs:
     runs-on: ubuntu-latest
     env:
       REPO_NAME: ${{ secrets.REPO_NAME }}
-      REPO_DIR: repo
+      REPO_DIR: repo # temp
 
       REMOTE: https://x-access-token:${{ secrets.PUSH_TOKEN }}@github.com/arnottferels/${{ secrets.REPO_NAME }}.git
       REMOTE_BRANCH: main
 
       REMOTE_DIR: build/${{ secrets.TABLE_NAME_CO }}
-      OUTPUT_DIR: v1/co/json # todo: change 
-
       TABLE_NAME: ${{ secrets.TABLE_NAME_CO }}
 
       SILENT: "1"
+      OUTPUT_DIR: v1/co/json # use v1/json for non-repo tests
 
     steps:
       - uses: actions/checkout@v4.2.2
@@ -45,12 +44,21 @@ jobs:
           npm install
           npm run ${{ secrets.TABLE_NAME_CO }}:build
 
-      - name: Copy from remote repo to output
+      - name: Commit to target repo
+        run: |
+          cd $REPO_DIR
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add .
+          git commit -q -m "v1: Update files $(date -u +'%F %H:%M')" || echo "no changes"
+          git push origin $REMOTE_BRANCH
+
+      - name: Copy built files from target repo
         run: |
           mkdir -p "$OUTPUT_DIR/${{ secrets.TABLE_NAME_CO }}"
-          cp -r "$REPO_DIR/$REMOTE_DIR/"* "$OUTPUT_DIR/${{ secrets.TABLE_NAME_CO }}/"
+          cp -r "$REPO_DIR/$REMOTE_DIR/"* "$OUTPUT_DIR"
 
-      - name: Commit copied files
+      - name: Commit and push updated files
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
