@@ -22,7 +22,7 @@ jobs:
       REMOTE_BRANCH: main
 
       REMOTE_DIR: build/${{ secrets.TABLE_NAME_CO }}
-      TABLE_NAME: ${{ secrets.TABLE_NAME_CO }}
+      TABLE_NAME: ${{ secrets.TABLE_NAME_CO }} # use "secrets.TABLE_NAME" for non-repo tests
 
       SILENT: "1"
       OUTPUT_DIR: co/v1/json # use v1/json for non-repo tests

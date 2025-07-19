@@ -23,7 +23,7 @@ jobs:
 
       REMOTE_COUNT_FILE: build/${{ secrets.TABLE_NAME_VC }}/unique_visit/page_path_content_page.json
 
-      TABLE_NAME: ${{ secrets.TABLE_NAME_VC }}
+      TABLE_NAME: ${{ secrets.TABLE_NAME_VC }} # use "secrets.TABLE_NAME" for non-repo tests
 
       SILENT: "1"
       OUTPUT_DIR: vc/v2/json # use v2/json for non-repo tests
