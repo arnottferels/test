@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
   workflow_run:
     workflows:
-      - "v2: Export vc table (Yesterday)" # use "v2: Export table (Yesterday)" for non-repo tests
+      - "v2: Export vc table (Yesterday)" # ! non-test repo: "v2: Export table (Yesterday)"
     types:
       - completed
 
@@ -23,10 +23,10 @@ jobs:
 
       REMOTE_COUNT_FILE: build/${{ secrets.TABLE_NAME_VC }}/unique_visit/page_path_content_page.json
 
-      TABLE_NAME: ${{ secrets.TABLE_NAME_VC }} # use "secrets.TABLE_NAME" for non-repo tests
+      TABLE_NAME: ${{ secrets.TABLE_NAME_VC }} # ! non-test repo: "secrets.TABLE_NAME"
 
       SILENT: "1"
-      OUTPUT_DIR: vc/v2/json # use v2/json for non-repo tests
+      OUTPUT_DIR: vc/v2/json # ! non-test repo: v2/json
       OUTPUT_COUNT_FILE: c.json
 
     steps:

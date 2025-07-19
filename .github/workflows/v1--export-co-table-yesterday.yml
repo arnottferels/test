@@ -1,4 +1,4 @@
-name: "v1: Export co table (Yesterday)" # use "v1: Export table (Yesterday)" for non-repo tests
+name: "v1: Export co table (Yesterday)" # ! non-test repo: "v1: Export table (Yesterday)" 
 
 on:
   workflow_dispatch:
@@ -9,13 +9,13 @@ permissions:
   contents: write
 
 jobs:
-  export-co-table-yesterday: # use "export-table-yesterday" for non-repo tests
+  export-co-table-yesterday: # ! non-test repo: "export-table-yesterday" 
     runs-on: ubuntu-latest
     env:
       PROJECT_URL: ${{ secrets.PROJECT_URL }}
       SERVICE_ROLE: ${{ secrets.SERVICE_ROLE }}
 
-      TABLE_NAME: ${{ secrets.TABLE_NAME_CO }} # use "secrets.TABLE_NAME" for non-repo tests
+      TABLE_NAME: ${{ secrets.TABLE_NAME_CO }} # ! non-test repo: "secrets.TABLE_NAME" 
 
       REPO_NAME: ${{ secrets.REPO_NAME }}
       REPO_DIR: repo

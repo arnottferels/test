@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
   workflow_run:
     workflows:
-      - "v1: Export co table (Yesterday)" # use "v1: Export table (Yesterday)" for non-repo tests
+      - "v1: Export co table (Yesterday)" # ! non-test repo: "v1: Export table (Yesterday)" 
     types:
       - completed
 
@@ -22,10 +22,10 @@ jobs:
       REMOTE_BRANCH: main
 
       REMOTE_DIR: build/${{ secrets.TABLE_NAME_CO }}
-      TABLE_NAME: ${{ secrets.TABLE_NAME_CO }} # use "secrets.TABLE_NAME" for non-repo tests
+      TABLE_NAME: ${{ secrets.TABLE_NAME_CO }} # ! non-test repo: "secrets.TABLE_NAME" 
 
       SILENT: "1"
-      OUTPUT_DIR: co/v1/json # use v1/json for non-repo tests
+      OUTPUT_DIR: co/v1/json # ! non-test repo: v1/json 
 
     steps:
       - uses: actions/checkout@v4.2.2
