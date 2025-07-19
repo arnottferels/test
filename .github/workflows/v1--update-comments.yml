@@ -25,7 +25,7 @@ jobs:
       TABLE_NAME: ${{ secrets.TABLE_NAME_CO }}
 
       SILENT: "1"
-      OUTPUT_DIR: v1/co/json # use v1/json for non-repo tests
+      OUTPUT_DIR: co/v1/json # use v1/json for non-repo tests
 
     steps:
       - uses: actions/checkout@v4.2.2
