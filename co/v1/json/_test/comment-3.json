@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "timestamp": "2025-07-18T16:54:40.782Z",
+    "timestamp": "2025-07-18T16:54:40.782+00:00",
     "comment_id": "788400a8-4b2f-4d43-ad00-f41d73d2d9c5",
     "parent_comment_id": null,
     "page_path": "/_test/comment-3",
@@ -9,7 +9,43 @@
     "name": "alice",
     "email": "alice@example.com",
     "visitor_id": "304f5852-4ca8-45f9-835d-5eb2c0099ae4",
-    "fingerprint": null
+    "is_hidden": null
+  },
+  {
+    "id": 2,
+    "timestamp": "2025-07-18T17:11:01.445+00:00",
+    "comment_id": "37b557d3-510f-4db8-8c87-7cbfff06b5e9",
+    "parent_comment_id": "788400a8-4b2f-4d43-ad00-f41d73d2d9c5",
+    "page_path": "/_test/comment-3",
+    "message": "bob test comment",
+    "name": "bob",
+    "email": "bob@example.com",
+    "visitor_id": "d50494c0-0df3-4d4b-9641-d7551a464b63",
+    "is_hidden": null
+  },
+  {
+    "id": 3,
+    "timestamp": "2025-07-18T17:23:20.609+00:00",
+    "comment_id": "8ded6cad-2477-4192-8ebf-8ab3101304da",
+    "parent_comment_id": null,
+    "page_path": "/_test/comment-3",
+    "message": "charlie",
+    "name": "charlie",
+    "email": "charlie@example.com",
+    "visitor_id": "d50494c0-0df3-4d4b-9641-d7551a464b63",
+    "is_hidden": null
+  },
+  {
+    "id": 4,
+    "timestamp": "2025-07-18T17:34:39.979+00:00",
+    "comment_id": "23d0e754-f5ff-4418-935b-21855f51727d",
+    "parent_comment_id": "788400a8-4b2f-4d43-ad00-f41d73d2d9c5",
+    "page_path": "/_test/comment-3",
+    "message": "david",
+    "name": "david",
+    "email": "",
+    "visitor_id": "d50494c0-0df3-4d4b-9641-d7551a464b63",
+    "is_hidden": null
   },
   {
     "id": 300,
