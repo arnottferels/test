@@ -1,4 +1,4 @@
-name: "v1: Export co table (Yesterday)"
+name: "v1: Export co table (Yesterday)" # use "v1: Export table (Yesterday)" for non-repo tests
 
 on:
   workflow_dispatch:
@@ -54,5 +54,5 @@ jobs:
           git add $REMOTE_TABLE_DIR/
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git commit --allow-empty -m "${{ secrets.TABLE_NAME_CO }}(v2): Update table $YESTERDAY"
+          git commit --allow-empty -m "${{ secrets.TABLE_NAME_CO }}(v1): Update table $YESTERDAY"
           git push origin $REMOTE_BRANCH

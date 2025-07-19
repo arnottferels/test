@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
   workflow_run:
     workflows:
-      - "v2: Export vc table (Yesterday)"
+      - "v2: Export vc table (Yesterday)" # use "v2: Export table (Yesterday)" for non-repo tests
     types:
       - completed
 

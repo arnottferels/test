@@ -1,4 +1,4 @@
-name: "v2: Export vc table (Yesterday)"
+name: "v2: Export vc table (Yesterday)" # use "v2: Export table (Yesterday)" for non-repo tests
 
 on:
   workflow_dispatch:

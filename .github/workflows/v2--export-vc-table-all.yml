@@ -1,4 +1,4 @@
-name: "v2: Export vc table (All)"
+name: "v2: Export vc table (All)" # use "v2: Export table (All)" for non-repo tests
 
 on:
   workflow_dispatch:
