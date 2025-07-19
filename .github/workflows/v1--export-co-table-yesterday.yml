@@ -1,21 +1,21 @@
-name: "v1: Export co table (Yesterday)" # ! non-test repo: "v1: Export table (Yesterday)" 
+name: "v1: Export co table (Yesterday)" # ! non-test repo: "v1: Export table (Yesterday)"
 
 on:
   workflow_dispatch:
   schedule:
-    - cron: "0 0 * * *"
+    - cron: "0 3 * * *" # ! non-test repo: "0 0 * * *"
 
 permissions:
   contents: write
 
 jobs:
-  export-co-table-yesterday: # ! non-test repo: "export-table-yesterday" 
+  export-co-table-yesterday: # ! non-test repo: "export-table-yesterday"
     runs-on: ubuntu-latest
     env:
       PROJECT_URL: ${{ secrets.PROJECT_URL }}
       SERVICE_ROLE: ${{ secrets.SERVICE_ROLE }}
 
-      TABLE_NAME: ${{ secrets.TABLE_NAME_CO }} # ! non-test repo: "secrets.TABLE_NAME" 
+      TABLE_NAME: ${{ secrets.TABLE_NAME_CO }} # ! non-test repo: "secrets.TABLE_NAME"
 
       REPO_NAME: ${{ secrets.REPO_NAME }}
       REPO_DIR: repo
