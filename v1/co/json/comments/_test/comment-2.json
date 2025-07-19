@@ -8,8 +8,8 @@
     "message": "test comment",
     "name": "foo",
     "email": "foo@example.com",
-    "visitor_id": "v-dummy-202",
-    "fingerprint": "fp-dummy-202"
+    "visitor_id": "v-dummy-200",
+    "fingerprint": "fp-dummy-200"
   },
   {
     "id": 201,
